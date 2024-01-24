@@ -3,6 +3,7 @@ import re
 from contextlib import redirect_stdout
 
 os.path.expanduser("/article2.txt")
+os.path.expanduser("/report.txt")
 
 def count_word_line(line, word):
     pattern = re.compile(rf'\b{re.escape(word)}\b', flags=re.IGNORECASE)
@@ -14,7 +15,7 @@ def find_and_print_occurrences(full_passage, word):
     for i, line in enumerate(full_passage, start=1):
         occurrences_in_line = count_word_line(line, word)
         if occurrences_in_line >= 1:
-            print(f"Line {i}: The word '{word}' appears {occurrences_in_line} times.")
+            print(f"Line {i}: The word '{word}' appears {occurrences_in_line} times and is changed with {replace_word}.")
             word_found = True
     if not word_found:
         print(f"The word '{word}' is not found in the passage.")
@@ -43,4 +44,6 @@ replace_word = input("\nWhat word would you like to replace it with? ")
 with open('article2.txt', 'w') as f:
     with redirect_stdout(f):
         replace_words_in_passage(full_passage, word, replace_word)
+with open('report.txt', 'w') as f:
+    with redirect_stdout(f):
         find_and_print_occurrences(passage, word)

@@ -1,0 +1,7 @@
+Line 4: The word 'AM' appears 2 times and is changed with bob.
+Line 5: The word 'AM' appears 1 times and is changed with bob.
+Line 6: The word 'AM' appears 1 times and is changed with bob.
+Line 8: The word 'AM' appears 1 times and is changed with bob.
+Line 9: The word 'AM' appears 1 times and is changed with bob.
+Line 10: The word 'AM' appears 1 times and is changed with bob.
+Line 13: The word 'AM' appears 1 times and is changed with bob.
